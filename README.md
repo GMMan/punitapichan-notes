@@ -47,6 +47,9 @@
     just here for completeness
 - [Ghidra processor for µ'nSP](https://github.com/GMMan/sleigh-unsp/tree/discrete-registers) - 
   add this if you want to reverse engineer the ROM inside Ghidra
+- µ'nSP IDE: contains some additional files that may be useful. Downloaded
+  version as of March 2021 contains the files listed under architecture
+  documentation. Find on [this page](https://www.generalplus.com/1LVlangLNs7SVs5SNservice_n_support_d).
 
 ## Software
 
