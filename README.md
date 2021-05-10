@@ -4,7 +4,7 @@
 
 - IC1: MCU: GeneralPlus GPL95101UB-002A-QL241
   - High-end LCD toy controller
-  - 16-bit u'nSP architecture
+  - 16-bit µ'nSP architecture
   - Built-in sound processing unit and picture processing unit
   - Difference from GPL95101UA: faster (quad) SPI?
   - [Datasheet for GPL95101UA](docs/datasheet/GPL95101UA.pdf)
@@ -26,25 +26,25 @@
 
 - Programming manuals
   - [GPL162002A/162003A Programming Guide](docs/other_guides/7164807.pdf) -
-    A somewhat similar u'nSP-based chip, but missing information for some
+    A somewhat similar µ'nSP-based chip, but missing information for some
     peripherals
   - [GPL32900A Programming Guide](docs/other_guides/GPL32900AV01_pro.pdf) -
     An ARM-based processor, but has very similar PPU, SPU, and RTC peripherals
 - [Registers header file](docs/GPL951_Body.h) - lists memory addresses of
   almost all the peripherals and registers
 - Architecture documentation
-  - [u'nSP Programmer's Guide](<docs/arch/unSP%20Programmer's Guide.pdf>) -
+  - [µ'nSP Programmer's Guide](<docs/arch/unSP%20Programmer's Guide.pdf>) -
     architecture documentation, with all the instructions between different
-    versions of u'nSP
-  - [u'nSP Instruction Set Summary](<docs/arch/unSP Instruction Set Summary.pdf>) -
-    an extract of section 6.2.3 from the u'nSP Programmer's Guide, when you need
+    versions of µ'nSP
+  - [µ'nSP Instruction Set Summary](<docs/arch/unSP Instruction Set Summary.pdf>) -
+    an extract of section 6.2.3 from the µ'nSP Programmer's Guide, when you need
     a quick reference for decoding machine code
-  - [u'nSP Programming Tools User's Manual](<docs/arch/unSP Programming Tools User's Manual.pdf>) -
+  - [µ'nSP Programming Tools User's Manual](<docs/arch/unSP Programming Tools User's Manual.pdf>) -
     compiler documentation; documents calling conventions, and usage of
     assembler if you want to test-assemble some code
-  - [GCC for u'nSP source code](https://sourceforge.net/projects/unspgcc/) -
+  - [GCC for µ'nSP source code](https://sourceforge.net/projects/unspgcc/) -
     just here for completeness
-- [Ghidra processor for u'nSP](https://github.com/GMMan/sleigh-unsp/tree/discrete-registers) - 
+- [Ghidra processor for µ'nSP](https://github.com/GMMan/sleigh-unsp/tree/discrete-registers) - 
   add this if you want to reverse engineer the ROM inside Ghidra
 
 ## Software
@@ -88,7 +88,7 @@ Per code in the IDE, its format is:
 See `Calibration.asm` from the IDE for what the fields mean.
 
 In practice, the last dword is the address of the entry point. Note that in
-u'nSP the vector table starts at 0x00fff5 by default, and after the flash is
+µ'nSP the vector table starts at 0x00fff5 by default, and after the flash is
 mapped the vector table from flash occupies the same space.
 
 #### Firmware
@@ -289,7 +289,7 @@ will have to find other base address references and update them too.
 The following functions are useful to know about when trying to extract
 graphics. Note that pointers use similar notation as in Ghidra to denote
 addresses outside the range of 16-bits. Although addresses may appear as
-32-bits, keep in mind that the address space in u'nSP is only 22 bits wide.
+32-bits, keep in mind that the address space in µ'nSP is only 22 bits wide.
 
 #### General
 
