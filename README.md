@@ -263,21 +263,26 @@ For sprite definitions:
   The most significant bit indicates whether this is the last sprite definition
   for the current sprite.
 
-  Note that `base_charnum` is relative to the starting character, not relative
-  to the start of the resource.
+Note that `base_charnum` is relative to the starting character, not relative
+to the start of the resource.
 
-  Sprite characters are found in one of three locations:
-  - Global: package path `0/0`, where all the tapichans, drinks, ingredient
-    sprites, and various other sprites for screens that use the above are found.
-  - Minigame: package path `31/0`, where all the sprites for minigames are
-    located.
-  - Per-screen: usually the last, but sometimes first, resource in the
-    corresponding subpackage, used when sprites are not in global or minigame
-    characters resource.
+Sprite characters are found in one of three locations:
+- Global: package path `0/0`, where all the tapichans, drinks, ingredient
+  sprites, and various other sprites for screens that use the above are found.
+- Minigame: package path `31/0`, where all the sprites for minigames are
+  located.
+- Per-screen: usually the last, but sometimes first, resource in the
+  corresponding subpackage, used when sprites are not in global or minigame
+  characters resource.
 
 Note the same sprite definition may be reused but with different character
 bases and palettes. They are usually stored contiguously, both inside the
 characters resource and contiguously numbered palette resources.
+
+Also note that changing the sprite size is generally impractical due to heavy
+use of shared characters. Sprite base addresses are embedded in code, so unless
+you want to tack replaced sprites on to the end of the characters resource, you
+will have to find other base address references and update them too.
 
 ### Graphics functions in code
 
