@@ -481,7 +481,7 @@ To convert this format back to WAV, replace the DRM header with length of audio
 in bytes, and use this function from `A3600.dll` to perform the conversion:
 
 ```c
-int a3600_dec(char *inFile, char *outFile, int unknown, void* processor);
+int a3600_dec(char *inFile, char *outFile, int unknown, void *processor);
 ```
 
 Use `0` for `unknown` and `NULL` for `processor`. The output will be in WAV
