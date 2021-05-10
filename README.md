@@ -4,7 +4,8 @@
 
 - IC1: MCU: GeneralPlus GPL95101UB-002A-QL241
   - High-end LCD toy controller
-  - 16-bit µ'nSP architecture
+  - 16-bit µ'nSP 2.0 architecture
+  - µ'nSP 2.0 is not widely supported by RE tools I have
   - Built-in sound processing unit and picture processing unit
   - Difference from GPL95101UA: faster (quad) SPI?
   - [Datasheet for GPL95101UA](docs/datasheet/GPL95101UA.pdf)
