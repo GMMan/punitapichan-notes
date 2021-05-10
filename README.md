@@ -591,10 +591,12 @@ There are several sprites to a tapichan:
 - Small sprites in package path `0/0`: each sprite has 4 variants: normal,
   happy, sad, very sad. Happy is used when you press the straw on the standby
   screen, while sad is when the drink level is low, and very sad is when drink
-  level is very low. Size for each variant is 64x64.
+  level is very low. Seen on standby screen and database. Size for each variant
+  is 64x64, all variants share a 16-color palette.
 - Tapichan names in package path `0/1`: tapichan name on first line, the word
   "tapichan" on second line. Palette is shared across all names. Size is 72x24.
-- Large sprites in package path `0/2`: Size is 96x72.
+- Large sprites in package path `0/2`: Seen on tapikatsu result and database
+  details. Size is 96x72, 64-color palette.
 
 For small sprites, palette index is tapichan index plus 1. For large sprites,
 palette index is same as tapichan. Index 0 is used for tapichans in tapikatsu,
