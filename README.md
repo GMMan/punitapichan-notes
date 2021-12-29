@@ -631,13 +631,27 @@ See [this tweet thread](https://twitter.com/GMMan_BZFlag/status/1378114944181305
   How much of a role does selecting drink base, ice, and sugar play in the
   tapichan picked? Does the amount of time between tapikatsu affect the
   tapichan given?
+  - I have this written up somewhere but uncommitted. The combination of base, ice,
+    and sugar serve as a password for particular tapichans in case you're not getting
+    what you want from the RNG. I've also got the list of dates for everything.
+  - I do want to make a full guide for Punitapi-chan at some point, but currently
+    otherwise occupied with other toy projects.
 - Standby screen: how quickly does the drink level go down?
 - Extra secret tapichans: there are two tapichans that don't show up anywhere
   in the game but the sprites are present: Waon dog and witch. Are these
   actually unreferenced, or is there a way to obtain them?
+  - They are actually unreferenced and not obtainable.
 - Sweeping minigame: how does the game determine whether you find 500p?
+  - RNG. There's a more nuanced answer, but I don't remember off the top of my head.
 - Ingredients inventory: Bandai Mania video showed an inventory of 99
   of each ingredient. Was that a special debug build, or is there a way to
   trigger this on the production game too?
 - Mysterious data after resources package: what is this exactly? Is it
   referenced anywhere? Is it graphics, or just padding?
+  - Not graphics, not padding. IIRC it's actually some precalculated tables
+    for sines and stuff, used by the SPU driver. It just happens that the
+    resources pack was pinned at a particular location and there wasn't enough
+    room prior to store all the tables. The mystery DRM file from before the pack
+    is a default piano instrument note for MIDI that's bundled with the SPU
+    driver.
+    
